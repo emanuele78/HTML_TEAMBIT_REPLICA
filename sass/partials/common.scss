@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $max_width;
+  margin: 0 auto;
+}
+
+@mixin common_button {
+  font-size: $button_font_size;
+  font-weight: $button_font_weight;
+  height: $button_height;
+  padding: 0 $button_padding_lr;
+  border-radius: $button_border_radius;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+}
+
+@mixin button_primary {
+  color: $button_font_color;
+  background-color: $button_bg;
+  transition: .4s ease;
+  &:hover {
+    background-color: $button_bg_hover;
+  }
+}
+
+@mixin inline_list {
+  list-style-type: none;
+  & li {
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.presentation {
+  & .button_primary {
+    @include common_button;
+    @include button_primary;
+
+    .button_icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+
+  & .button {
+    @include common_button;
+
+    .button_icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}
