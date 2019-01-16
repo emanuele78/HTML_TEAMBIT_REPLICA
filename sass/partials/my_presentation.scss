@@ -1,84 +1,44 @@
 .presentation_wrapper {
-  @include wrapper;
+	@include wrapper;
 
-  .presentation {
-    margin: 100px 0;
-    width: 100%;
+	.presentation {
+		margin: 100px 0;
+		width: 100%;
 
-    & .presentation_left {
-      float: left;
-      width: 45%;
-      $margin_bt: 30px;
+		& .presentation_left {
+			float: left;
+			width: 45%;
+			$margin_bt: 30px;
 
-      h1 {
-        font-size: $big_title_size;
-        color: $big_title_color;
-        margin-bottom: $margin_bt;
-      }
+			h1 {
+				font-size: $big_title_size;
+				color: $big_title_color;
+				margin-bottom: $margin_bt;
+			}
 
-      p {
-        font-size: $font_medium;
-        color: $big_title_color;
-        line-height: 1.6;
-        margin-bottom: $margin_bt;
-      }
+			p {
+				font-size: $font_medium;
+				color: $big_title_color;
+				line-height: 1.6;
+				margin-bottom: $margin_bt;
+			}
 
-      .signin_buttons {
-        margin-bottom: $margin_bt;
-        display: flex;
-        align-items: center;
+		}
 
-        > span {
-          color: #bdb5af;
-          font-size: 13px;
-          margin: 0 20px;
-        }
+		& .presentation_right {
+			float: left;
+			width: 55%;
+			text-align: right;
 
-        .button {
-          @include common_button;
-          @include button_primary;
+			img {
+				width: 90%;
+			}
+		}
 
-          span {
-            padding-left: 10px;
-          }
-        }
-      }
-
-      .signin_other {
-        a {
-          text-decoration: none;
-          color: #58402c;
-          font-size: 14px;
-          font-weight: 400;
-          transition: .4s ease;
-
-          i {
-            padding-left: 6px;
-            font-size: 18px;
-            vertical-align: middle;
-          }
-        }
-
-        a:hover{
-          color: #30488f;
-        }
-      }
-    }
-
-    & .presentation_right {
-      float: left;
-      width: 55%;
-      text-align: right;
-
-      img {
-        width: 90%;
-      }
-    }
-
-    &:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  }
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
 }

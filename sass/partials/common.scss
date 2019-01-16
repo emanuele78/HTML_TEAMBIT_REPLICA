@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -40,5 +42,52 @@
     a {
       text-decoration: none;
     }
+  }
+}
+
+@mixin hero_common {
+  width: 100%;
+  background-color: #ffe7d2;
+}
+
+$margin_bt: 30px;
+.signin_buttons {
+  margin-bottom: $margin_bt;
+  display: flex;
+  align-items: center;
+
+  > span {
+    color: #bdb5af;
+    font-size: 13px;
+    margin: 0 20px;
+  }
+
+  .button {
+    @include common_button;
+    @include button_primary;
+
+    span {
+      padding-left: 10px;
+    }
+  }
+}
+
+.signin_other {
+  a {
+    text-decoration: none;
+    color: #58402c;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .4s ease;
+
+    i {
+      padding-left: 6px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+  }
+
+  a:hover{
+    color: #30488f;
   }
 }

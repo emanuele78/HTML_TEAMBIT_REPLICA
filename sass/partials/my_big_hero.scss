@@ -1,7 +1,6 @@
 .big_hero {
-  width: 100%;
+  @include hero_common;
   padding: 90px 0;
-  background-color: #ffe7d2;
 
   .wrapper {
     @include wrapper;
