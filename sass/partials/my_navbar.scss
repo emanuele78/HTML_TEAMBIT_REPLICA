@@ -1,56 +1,71 @@
-.navbar {
-  width: 100%;
-  padding: 20px 0;
+@mixin v_center {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid lightgrey;
+  align-items: center;
+}
 
+.navbar_wrapper {
+  @include wrapper;
 
-  & .navbar__right__items {
-    @include inline_list;
+  .navbar {
+    width: 100%;
+    padding: 20px 0;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
 
-    li {
-      font-size: $navbar_item_font_size;
-      font-weight: $navbar_item_weight;
-      margin-left: 45px;
-    }
-
-    a:not(.button) {
-      color: $navbar_item_text_color;
-      transition: .4s ease;
-    }
-
-    a i {
-      margin-left: 10px;
-    }
-
-    a:hover {
-      color: $navbar_item_hover_color;
-    }
-
-    .button {
-      @include common_button;
-      border: 1px solid $button_bg;
-      transition: .5s ease;
-      span {
-        padding-left: 10px;
-        font-weight: $navbar_item_weight;
-        color: $button_bg;
+    .navbar_left {
+      a {
+        @include v_center;
+        height: 100%;
       }
     }
 
-    .button:hover {
-      background-color: $button_bg;
-    }
+    & ul {
+      @include inline_list;
+      @include v_center;
 
-    .button:hover span{
-      color: white;
-    }
+      li {
+        font-size: $navbar_item_font_size;
+        font-weight: $navbar_item_weight;
+        margin-left: 45px;
+      }
 
-    .button:hover path {
-      fill: white;
+      a:not(.button) {
+        color: $navbar_item_text_color;
+        transition: .4s ease;
+      }
+
+      a i {
+        margin-left: 10px;
+      }
+
+      a:hover {
+        color: $navbar_item_hover_color;
+      }
+
+      .button {
+        @include common_button;
+        border: 1px solid $button_bg;
+        transition: .5s ease;
+
+        span {
+          padding-left: 10px;
+          font-weight: $navbar_item_weight;
+          color: $button_bg;
+        }
+      }
+
+      .button:hover {
+        background-color: $button_bg;
+      }
+
+      .button:hover span {
+        color: white;
+      }
+
+      .button:hover path {
+        fill: white;
+      }
     }
   }
 }

@@ -5,13 +5,13 @@
   font-family: "Roboto", sans-serif;
 }
 
-.wrapper {
+.navbar_wrapper {
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
 }
 
-.navbar {
+.navbar_wrapper .navbar {
   width: 100%;
   padding: 20px 0;
   display: flex;
@@ -19,40 +19,46 @@
   border-bottom: 1px solid lightgrey;
 }
 
-.navbar .navbar__right__items {
+.navbar_wrapper .navbar .navbar_left a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar_wrapper .navbar ul {
   list-style-type: none;
   display: flex;
   align-items: center;
 }
 
-.navbar .navbar__right__items li {
+.navbar_wrapper .navbar ul li {
   display: inline-block;
 }
 
-.navbar .navbar__right__items li a {
+.navbar_wrapper .navbar ul li a {
   text-decoration: none;
 }
 
-.navbar .navbar__right__items li {
+.navbar_wrapper .navbar ul li {
   font-size: 14px;
   font-weight: 700;
   margin-left: 45px;
 }
 
-.navbar .navbar__right__items a:not(.button) {
+.navbar_wrapper .navbar ul a:not(.button) {
   color: #58402c;
   transition: 0.4s ease;
 }
 
-.navbar .navbar__right__items a i {
+.navbar_wrapper .navbar ul a i {
   margin-left: 10px;
 }
 
-.navbar .navbar__right__items a:hover {
+.navbar_wrapper .navbar ul a:hover {
   color: #30488f;
 }
 
-.navbar .navbar__right__items .button {
+.navbar_wrapper .navbar ul .button {
   font-size: 14px;
   font-weight: 400;
   height: 36px;
@@ -66,25 +72,66 @@
   transition: 0.5s ease;
 }
 
-.navbar .navbar__right__items .button span {
+.navbar_wrapper .navbar ul .button span {
   padding-left: 10px;
   font-weight: 700;
   color: #30488f;
 }
 
-.navbar .navbar__right__items .button:hover {
+.navbar_wrapper .navbar ul .button:hover {
   background-color: #30488f;
 }
 
-.navbar .navbar__right__items .button:hover span {
+.navbar_wrapper .navbar ul .button:hover span {
   color: white;
 }
 
-.navbar .navbar__right__items .button:hover path {
+.navbar_wrapper .navbar ul .button:hover path {
   fill: white;
 }
 
-.presentation .button_primary {
+.presentation_wrapper {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.presentation_wrapper .presentation {
+  margin: 100px 0;
+  width: 100%;
+}
+
+.presentation_wrapper .presentation .presentation_left {
+  float: left;
+  width: 45%;
+}
+
+.presentation_wrapper .presentation .presentation_left h1 {
+  font-size: 50px;
+  color: #58402c;
+  margin-bottom: 30px;
+}
+
+.presentation_wrapper .presentation .presentation_left p {
+  font-size: 22px;
+  color: #58402c;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.presentation_wrapper .presentation .presentation_left .signin_buttons {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.presentation_wrapper .presentation .presentation_left .signin_buttons > span {
+  color: #bdb5af;
+  font-size: 13px;
+  margin: 0 20px;
+}
+
+.presentation_wrapper .presentation .presentation_left .signin_buttons .button {
   font-size: 14px;
   font-weight: 400;
   height: 36px;
@@ -99,31 +146,45 @@
   transition: 0.4s ease;
 }
 
-.presentation .button_primary:hover {
+.presentation_wrapper .presentation .presentation_left .signin_buttons .button:hover {
   background-color: #263566;
 }
 
-.presentation .button_primary .button_icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
+.presentation_wrapper .presentation .presentation_left .signin_buttons .button span {
+  padding-left: 10px;
 }
 
-.presentation .button {
+.presentation_wrapper .presentation .presentation_left .signin_other a {
+  text-decoration: none;
+  color: #58402c;
   font-size: 14px;
   font-weight: 400;
-  height: 36px;
-  padding: 0 20px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  text-decoration: none;
+  transition: 0.4s ease;
 }
 
-.presentation .button .button_icon {
-  display: inline-block;
+.presentation_wrapper .presentation .presentation_left .signin_other a i {
+  padding-left: 6px;
+  font-size: 18px;
   vertical-align: middle;
-  margin-right: 10px;
+}
+
+.presentation_wrapper .presentation .presentation_left .signin_other a:hover {
+  color: #30488f;
+}
+
+.presentation_wrapper .presentation .presentation_right {
+  float: left;
+  width: 55%;
+  text-align: right;
+}
+
+.presentation_wrapper .presentation .presentation_right img {
+  width: 90%;
+}
+
+.presentation_wrapper .presentation:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 

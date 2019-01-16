@@ -1,22 +1,84 @@
-.presentation {
-  & .button_primary {
-    @include common_button;
-    @include button_primary;
+.presentation_wrapper {
+  @include wrapper;
 
-    .button_icon {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
+  .presentation {
+    margin: 100px 0;
+    width: 100%;
+
+    & .presentation_left {
+      float: left;
+      width: 45%;
+      $margin_bt: 30px;
+
+      h1 {
+        font-size: $big_title_size;
+        color: $big_title_color;
+        margin-bottom: $margin_bt;
+      }
+
+      p {
+        font-size: $font_medium;
+        color: $big_title_color;
+        line-height: 1.6;
+        margin-bottom: $margin_bt;
+      }
+
+      .signin_buttons {
+        margin-bottom: $margin_bt;
+        display: flex;
+        align-items: center;
+
+        > span {
+          color: #bdb5af;
+          font-size: 13px;
+          margin: 0 20px;
+        }
+
+        .button {
+          @include common_button;
+          @include button_primary;
+
+          span {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      .signin_other {
+        a {
+          text-decoration: none;
+          color: #58402c;
+          font-size: 14px;
+          font-weight: 400;
+          transition: .4s ease;
+
+          i {
+            padding-left: 6px;
+            font-size: 18px;
+            vertical-align: middle;
+          }
+        }
+
+        a:hover{
+          color: #30488f;
+        }
+      }
     }
-  }
 
-  & .button {
-    @include common_button;
+    & .presentation_right {
+      float: left;
+      width: 55%;
+      text-align: right;
 
-    .button_icon {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
+      img {
+        width: 90%;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   }
 }

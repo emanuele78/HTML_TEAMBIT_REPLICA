@@ -5,7 +5,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.wrapper {
+@mixin wrapper {
   width: 100%;
   max-width: $max_width;
   margin: 0 auto;
