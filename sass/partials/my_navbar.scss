@@ -1,71 +1,94 @@
 @mixin v_center {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
-.navbar_wrapper {
-  @include wrapper;
+.navbar {
+	height: 75px;
+	background-color: white;
 
-  .navbar {
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid lightgrey;
+	.navbar_wrapper {
+		@include wrapper;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		padding: 20px 0;
+		border-bottom: 1px solid lightgrey;
 
-    .navbar_left {
-      a {
-        @include v_center;
-        height: 100%;
-      }
-    }
+		.navbar_left {
+			.navbar_logo {
+				@include v_center;
+				height: 100%;
+			}
+		}
 
-    & ul {
-      @include inline_list;
-      @include v_center;
+		.navbar_right {
 
-      li {
-        font-size: $navbar_item_font_size;
-        font-weight: $navbar_item_weight;
-        margin-left: 45px;
-      }
+			.navbar_menu {
+				@include inline_list;
+				@include v_center;
 
-      a:not(.button) {
-        color: $navbar_item_text_color;
-        transition: .4s ease;
-      }
+				.menu_item {
+					font-size: $navbar_item_font_size;
+					font-weight: $navbar_item_weight;
+					margin-left: 45px;
 
-      a i {
-        margin-left: 10px;
-      }
+					.link {
+						&:not(.button) {
+							color: $navbar_item_text_color;
+							transition: .4s ease;
+						}
 
-      a:hover {
-        color: $navbar_item_hover_color;
-      }
+						&:hover {
+							color: $navbar_item_hover_color;
+						}
 
-      .button {
-        @include common_button;
-        border: 1px solid $button_bg;
-        transition: .5s ease;
+						.link_icon {
+							margin-left: 10px;
+						}
 
-        span {
-          padding-left: 10px;
-          font-weight: $navbar_item_weight;
-          color: $button_bg;
-        }
-      }
+					}
 
-      .button:hover {
-        background-color: $button_bg;
-      }
+					.button {
+						@include common_button;
+						border: 1px solid $button_bg;
+						transition: .5s ease;
 
-      .button:hover span {
-        color: white;
-      }
+						span {
+							padding-left: 10px;
+							font-weight: $navbar_item_weight;
+							color: $button_bg;
+						}
 
-      .button:hover path {
-        fill: white;
-      }
-    }
-  }
+						&:hover {
+							background-color: $button_bg;
+
+							& .button_text {
+								color: white;
+							}
+
+							& path {
+								fill: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.scrolled {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 55px;
+		border-bottom: 1px solid lightgrey;
+		box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .08);
+
+		.navbar_wrapper {
+			border-bottom: none;
+		}
+	}
 }

@@ -10,10 +10,10 @@
 		<title></title>
 	</head>
 	<body>
-		<div class="navbar_wrapper">
-			<div class="navbar">
+		<div class="navbar scrolled">
+			<div class="navbar_wrapper">
 				<div class="navbar_left">
-					<a href="">
+					<a class="navbar_logo" href="">
 						<svg height="26px" version="1.1" viewBox="0 0 110 26" width="110px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							<style>
 								.style0 {
@@ -42,12 +42,13 @@
 					</a>
 				</div>
 				<div class="navbar_right">
-					<ul>
-						<li><a href="">Solutions<i class="fas fa-caret-down"></i></a></li>
-						<li><a href="">Pricing</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Sign in</a></li>
-						<li><a class="button" href="">
+					<ul class="navbar_menu">
+						<li class="menu_item">
+							<a class="link" href="">Solutions<i class="link_icon fas fa-caret-down"></i></a></li>
+						<li class="menu_item"><a class="link" href="">Pricing</a></li>
+						<li class="menu_item"><a class="link" href="">Blog</a></li>
+						<li class="menu_item"><a class="link" href="">Sign in</a></li>
+						<li class="menu_item"><a class="button" href="">
 							<svg class="button_icon" height="18" viewBox="-1 -1 18 18" width="18">
 								<defs>
 									<path d="M0 0h18v18H0z" id="a03"></path>
@@ -64,7 +65,7 @@
 									<path d="M0.896174863,11.5603217 C1.78360656,10.8868633 2.67103825,10.2091153 3.55846995,9.53136729 C3.89945355,10.5136729 4.55519126,11.3844504 5.42076503,11.9806971 C5.96284153,12.3538874 6.58360656,12.6198391 7.23060109,12.7485255 C7.86885246,12.8772118 8.52896175,12.8600536 9.1715847,12.752815 C9.80983607,12.6412869 10.4262295,12.413941 10.9639344,12.0579088 C11.8251366,12.7142091 12.6863388,13.3705094 13.547541,14.0268097 C12.6163934,14.8718499 11.4491803,15.4466488 10.2163934,15.7254692 C8.85245902,16.0300268 7.40983607,16.0386059 6.05464481,15.6825737 C4.97923497,15.4037534 3.96939891,14.9018767 3.09945355,14.2198391 C2.18579235,13.5077748 1.42513661,12.5898123 0.896174863,11.5603217 L0.896174863,11.5603217 Z" fill="#34A853" id="Shape"></path>
 								</g>
 							</svg>
-							<span>Signup</span>
+							<span class="button_text">Signup</span>
 						</a></li>
 					</ul>
 				</div>
@@ -341,8 +342,9 @@
 		<div class="footer_wrapper">
 			<div class="footer">
 				<div class="footer_left">
-					<img src="assets/logo-small.svg" alt="">
-					<p><a href="">Teambit</a> helps teams create high performing cultures by making feedback a daily habit.</p>
+					<img alt="" src="assets/logo-small.svg">
+					<p><a href="">Teambit</a> helps teams create high performing cultures by making feedback a daily
+											  habit.</p>
 				</div>
 				<div class="footer_right">
 					<div class="col">
@@ -395,6 +397,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="chatbot">
+
 		</div>
 	</body>
 </html>
