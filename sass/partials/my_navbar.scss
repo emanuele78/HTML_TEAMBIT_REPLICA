@@ -47,32 +47,31 @@
 						.link_icon {
 							margin-left: 10px;
 						}
-
 					}
+				}
+			}
+		}
 
-					.button {
-						@include common_button;
-						border: 1px solid $button_bg;
-						transition: .5s ease;
+		.button {
+			@include common_button;
+			border: 1px solid $button_bg;
+			transition: .5s ease;
 
-						span {
-							padding-left: 10px;
-							font-weight: $navbar_item_weight;
-							color: $button_bg;
-						}
+			.button_text {
+				padding-left: 10px;
+				font-weight: $navbar_item_weight;
+				color: $button_bg;
+			}
 
-						&:hover {
-							background-color: $button_bg;
+			&:hover {
+				background-color: $button_bg;
 
-							& .button_text {
-								color: white;
-							}
+				& .button_text {
+					color: white;
+				}
 
-							& path {
-								fill: white;
-							}
-						}
-					}
+				& path {
+					fill: white;
 				}
 			}
 		}
@@ -89,6 +88,22 @@
 
 		.navbar_wrapper {
 			border-bottom: none;
+		}
+
+		.button {
+			background-color: $button_bg;
+
+			& .button_text {
+				color: white;
+			}
+
+			& path {
+				fill: white;
+			}
+
+			&:hover {
+				background-color: $button_bg_hover;
+			}
 		}
 	}
 }

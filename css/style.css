@@ -115,7 +115,7 @@
   margin-left: 10px;
 }
 
-.navbar .navbar_wrapper .navbar_right .navbar_menu .menu_item .button {
+.navbar .navbar_wrapper .button {
   font-size: 14px;
   font-weight: 400;
   height: 36px;
@@ -129,21 +129,21 @@
   transition: 0.5s ease;
 }
 
-.navbar .navbar_wrapper .navbar_right .navbar_menu .menu_item .button span {
+.navbar .navbar_wrapper .button .button_text {
   padding-left: 10px;
   font-weight: 700;
   color: #30488f;
 }
 
-.navbar .navbar_wrapper .navbar_right .navbar_menu .menu_item .button:hover {
+.navbar .navbar_wrapper .button:hover {
   background-color: #30488f;
 }
 
-.navbar .navbar_wrapper .navbar_right .navbar_menu .menu_item .button:hover .button_text {
+.navbar .navbar_wrapper .button:hover .button_text {
   color: white;
 }
 
-.navbar .navbar_wrapper .navbar_right .navbar_menu .menu_item .button:hover path {
+.navbar .navbar_wrapper .button:hover path {
   fill: white;
 }
 
@@ -159,6 +159,22 @@
 
 .navbar.scrolled .navbar_wrapper {
   border-bottom: none;
+}
+
+.navbar.scrolled .button {
+  background-color: #30488f;
+}
+
+.navbar.scrolled .button .button_text {
+  color: white;
+}
+
+.navbar.scrolled .button path {
+  fill: white;
+}
+
+.navbar.scrolled .button:hover {
+  background-color: #263566;
 }
 
 .presentation_wrapper {
