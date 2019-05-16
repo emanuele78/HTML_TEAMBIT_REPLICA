@@ -1,5 +1,5 @@
 # TEAMBIT REPLICA
-Replica della landing page di Teambi.
+Replica della landing page del sito Teambit.
 
 [![Generic badge](https://img.shields.io/badge/LIVEDEMO-HERE-<COLOR>.svg)](https://emanuelemazzante.dev/demo/teambit-replica/)
 
