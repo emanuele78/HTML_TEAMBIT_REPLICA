@@ -3,7 +3,7 @@ Replica della landing page del sito Teambit.
 
 [![Generic badge](https://img.shields.io/badge/LIVEDEMO-HERE-<COLOR>.svg)](https://emanuelemazzante.dev/demo/teambit-replica/)
 
-![screen](../master/art/demo_screen.png)
+![screen](../master/art/teambit_screen.png)
 
 ## Autore
 
